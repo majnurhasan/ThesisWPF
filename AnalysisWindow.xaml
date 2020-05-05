@@ -1,0 +1,116 @@
+﻿<Window x:Class="ThesisApplication.AnalysisWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ThesisApplication"
+        mc:Ignorable="d"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        WindowStartupLocation="CenterScreen"
+        Title="Snip Analysis"
+        Height="300" 
+        Width="680"
+        MaxHeight="500"
+        MaxWidth="750"
+        Icon="Resources/mosquito_QBy_icon.ico"
+        DataContext="{Binding Path=MainViewModel, Source={StaticResource Locator}}">
+    <Grid>
+        <StackPanel Margin="5" 
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center">
+            <TextBlock Text="SNIP FACTS"
+                       FontSize="32"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Margin="0,-3,0,0">
+            </TextBlock>
+            <Border BorderThickness="3" Width="650" Height="200" BorderBrush="#3F51B5">
+                <StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="10,5,0,5" 
+                               Text="• The total number of caught mosquitoes are "
+                               FontSize="20">
+                    </TextBlock>
+                    <TextBlock Text="{Binding Path=TotalNumberOfMosquitoes}"
+                               Margin="0,5,0,5"
+                               Foreground="#3F51B5"
+                               FontSize="20">
+                    </TextBlock>
+                    <TextBlock Text="."
+                               FontSize="20"
+                               Margin="0,5,0,5">
+                    </TextBlock>
+                </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="10,5,0,5" 
+                                   Text="• The total number of female mosquitoes are "
+                                   FontSize="20">
+                        </TextBlock>
+                        <TextBlock Text="{Binding Path=TotalFemales}"
+                                   Margin="0,5,0,5"
+                                   Foreground="Red"
+                                   FontSize="20">
+                        </TextBlock>
+                        <TextBlock Text="."
+                                   Margin="0,5,0,5"
+                                   FontSize="20">
+                        </TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="10,5,0,5" 
+                                   Text="• The total number of male mosquitoes are "
+                                   FontSize="20">
+                        </TextBlock>
+                        <TextBlock Text="{Binding Path=TotalMales}"
+                                   Margin="0,5,0,5"
+                                   Foreground="GreenYellow"
+                                   FontSize="20">
+                        </TextBlock>
+                        <TextBlock Text="."
+                                   Margin="0,5,0,5">
+                        </TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="10,5,0,5" 
+                                   Text="• The most caught species of mosquitoes are "
+                                   FontSize="20">
+                        </TextBlock>
+                        <TextBlock Text="Culex quinquefasciatus"
+                                   Margin="0,5,0,5"
+                                   Foreground="Yellow"
+                                   FontSize="20">
+                        </TextBlock>
+                        <TextBlock Text="."
+                                   FontSize="20"
+                                   Margin="0,5,0,5">
+                        </TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="10,5,0,5" 
+                                   FontSize="20"
+                                   Text="• The least caught species of mosquitoes are ">
+                        </TextBlock>
+                        <TextBlock Text="Aedes aegypti"
+                                   Margin="0,5,0,5"
+                                   FontSize="20"
+                                   Foreground="LightGray">
+                        </TextBlock>
+                        <TextBlock Text="."
+                                   FontSize="20"
+                                   Margin="0,5,0,5">
+                        </TextBlock>
+                    </StackPanel>
+
+
+
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,148 @@
+﻿<Window x:Class="ThesisApplication.SeparateReadingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ThesisApplication"
+        mc:Ignorable="d"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        WindowStartupLocation="CenterScreen"
+        Title="Separate Readings"
+        Height="480" 
+        Width="980"
+        MaxHeight="500"
+        MaxWidth="1200"
+        Icon="Resources/mosquito_QBy_icon.ico"
+        DataContext="{Binding Path=MainViewModel, Source={StaticResource Locator}}">
+    <Grid>
+        <StackPanel Margin="10" >
+            <StackPanel Orientation="Horizontal"
+                        Margin="2">
+                <TextBlock Text="Trap Number" 
+                           Margin="10,0,0,0"
+                           FontSize="14"
+                           FontWeight="Bold"></TextBlock>
+                <TextBlock Text="Latitude" 
+                           Margin="20,0,0,0"
+                           FontSize="14"
+                           FontWeight="Bold"></TextBlock>
+                <TextBlock Text="Longitude" 
+                           Margin="20,0,0,0"
+                           FontSize="14"
+                           FontWeight="Bold"></TextBlock>
+                <TextBlock Text="O. Freq." 
+                           Margin="20,0,0,0"
+                           FontSize="14"
+                           FontWeight="Bold"></TextBlock>
+                <TextBlock Text="A. Freq." 
+                           Margin="20,0,0,0"
+                           FontSize="14"
+                           FontWeight="Bold"></TextBlock>
+                <TextBlock Text="C. Freq." 
+                           Margin="20,0,0,0"
+                           FontSize="14"
+                           FontWeight="Bold"></TextBlock>
+                <TextBlock Text="Date and Time" 
+                           Margin="20,0,0,0"
+                           FontSize="14"
+                           FontWeight="Bold"></TextBlock>
+                <TextBlock Text="Temperature" 
+                           Margin="20,0,0,0"
+                           FontSize="14"
+                           FontWeight="Bold"></TextBlock>
+                <TextBlock Text="Humidity" 
+                           Margin="20,0,0,0"
+                           FontSize="14"
+                           FontWeight="Bold"></TextBlock>
+                <TextBlock Text="Genus" 
+                           Margin="20,0,0,0"
+                           FontSize="14"
+                           FontWeight="Bold"></TextBlock>
+                <TextBlock Text="Species" 
+                           Margin="20,0,0,0"
+                           FontSize="14"
+                           FontWeight="Bold"></TextBlock>
+                <TextBlock Text="Sex" 
+                           Margin="15,0,0,0"
+                           FontSize="14"
+                           FontWeight="Bold"></TextBlock>
+
+
+
+
+            </StackPanel>
+            <Border HorizontalAlignment="Center" BorderThickness="3" Width="1000" Height="320" Padding="2" Margin="3">
+                <Border.BorderBrush>
+                    <DrawingBrush Viewport="0,0,4,4" ViewportUnits="Absolute" TileMode="Tile">
+                        <DrawingBrush.Drawing>
+                            <DrawingGroup>
+                                <GeometryDrawing Brush="#3F51B5">
+                                    <GeometryDrawing.Geometry>
+                                        <GeometryGroup>
+                                            <RectangleGeometry Rect="0,0,50,50" />
+                                            <RectangleGeometry Rect="50,50,50,50" />
+                                        </GeometryGroup>
+                                    </GeometryDrawing.Geometry>
+                                </GeometryDrawing>
+                            </DrawingGroup>
+                        </DrawingBrush.Drawing>
+                    </DrawingBrush>
+                </Border.BorderBrush>
+                <ListBox Margin="10,7,10,10"
+                                 Width="950"
+                                 Height="290"
+                                 Background="White"
+                                 ItemsSource="{Binding Path=ReadingList}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel Orientation="Horizontal" Width="50" HorizontalAlignment="Center">
+                                    <TextBlock FontWeight="Bold" Margin="40,0,0,0" FontSize="14" Text="{Binding Path=TrapNumber}" Foreground="#303030"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Width="70" Margin="60,0,0,0">
+                                    <TextBlock FontSize="14" Text="{Binding Path=Geo1}" Foreground="#303030"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Width="100" Margin="0,0,0,0">
+                                    <TextBlock FontSize="14" Text="{Binding Path=Geo2}" Foreground="#303030"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Width="70" Margin="3,0,0,0">
+                                    <TextBlock FontSize="14" Text="{Binding Path=OFreq}" Foreground="#303030"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Width="70" Margin="0,0,0,0">
+                                    <TextBlock FontSize="14" Text="{Binding Path=AFreq}" Foreground="#303030"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Width="55" Margin="0,0,0,0">
+                                    <TextBlock FontSize="14" Text="{Binding Path=CFreq}" Foreground="#303030"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Width="110" Margin="0,0,0,0">
+                                    <TextBlock FontSize="14" Text="{Binding Path=Datetime}" Foreground="#303030"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Width="100" Margin="35,0,0,0">
+                                    <TextBlock FontSize="14" Text="{Binding Path=Temperature}" Foreground="#303030"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Width="75" Margin="0,0,0,0">
+                                    <TextBlock FontSize="14" Text="{Binding Path=Humidity}" Foreground="#303030"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Width="65" Margin="0,0,0,0">
+                                    <TextBlock FontSize="14" Text="{Binding Path=Genus}" Foreground="#303030"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Width="40" Margin="0,0,0,0">
+                                    <TextBlock FontSize="14" Text="{Binding Path=Species}" Foreground="#303030"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Width="50" Margin="0,0,0,0">
+                                    <TextBlock FontSize="14" Text="{Binding Path=Sex}" Foreground="#303030"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Border>
+            <TextBlock Margin="1" FontStyle="Italic" Text="Units: Freq. Values - Hz | Temperature - °C | Humidity - %"></TextBlock>
+            <TextBlock Margin="1" FontStyle="Italic" Text="Genus: 0 - Aedes | 1 - Anopheles | 2 - Culex"></TextBlock>
+            <TextBlock Margin="1" FontStyle="Italic" Text="Species: 0 - Aegypti | 1 - Albopictus | 2 - Gambiae | 3 - Stigmatosoma | 4 - Quinquefasciatus"></TextBlock>
+            <TextBlock Margin="1" FontStyle="Italic" Text="Sex: 0 - Male | 1 - Female"></TextBlock>
+
+        </StackPanel>
+    </Grid>
+</Window>

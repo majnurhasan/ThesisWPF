@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="mosquito %281%29.png" />
+    <None Remove="Resources\356-3565472_sweep-clear-icon-png-white.png" />
+    <None Remove="Resources\44fff35ae75f194bb5983977076bbda5.png" />
+    <None Remove="Resources\68213.png" />
+    <None Remove="Resources\Data-Database-icon.png" />
+    <None Remove="Resources\linecon+more+plus+round+icon-1320165922585878770.png" />
+    <None Remove="Resources\mosquito %281%29 - Copy.png" />
+    <None Remove="Resources\mosquito_QBy_icon.ico" />
+    <None Remove="Resources\STO.NINO NATIONAL HIGHSCHOOL MAP.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommonServiceLocator" Version="2.0.5" />
+    <PackageReference Include="MaterialDesignColors" Version="1.2.0" />
+    <PackageReference Include="MaterialDesignThemes" Version="2.6.0" />
+    <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="OxyPlot.Core" Version="2.0.0" />
+    <PackageReference Include="OxyPlot.Wpf" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\356-3565472_sweep-clear-icon-png-white.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\44fff35ae75f194bb5983977076bbda5.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\68213.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Data-Database-icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\linecon+more+plus+round+icon-1320165922585878770.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\mosquito (1) - Copy.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\mosquito_QBy_icon.ico">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\STO.NINO NATIONAL HIGHSCHOOL MAP.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>
